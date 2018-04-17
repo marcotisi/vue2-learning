@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/data-binding', function () {
+    return view('data-binding');
+});
