@@ -74,16 +74,26 @@
                     <ul>
                         <li v-for="name in names">@{{ name }}</li>
                     </ul>
+                    <input id="input" type="text">
+                    <button id="button">Add Name</button>
                 </div>
             </div>
         </div>
     <script src="{{ mix('js/app.js') }}"></script>
     <script>
-      new Vue({
+      let app = new Vue({
         el: '#app',
         data: {
           names: ['Marco', 'Maria', 'Balù']
         }
+      });
+
+      document.querySelector('#button').addEventListener('click', () => {
+        let name = document.querySelector('#input');
+
+        app.names.push(name.value);
+
+        name.value = '';
       });
     </script>
     </body>
