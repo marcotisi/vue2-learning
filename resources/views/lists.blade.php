@@ -85,15 +85,17 @@
         el: '#app',
         data: {
           names: ['Marco', 'Maria', 'Balù']
+        },
+
+        mounted() {
+          document.querySelector('#button').addEventListener('click', () => {
+            let name = document.querySelector('#input');
+
+            app.names.push(name.value);
+
+            name.value = '';
+          });
         }
-      });
-
-      document.querySelector('#button').addEventListener('click', () => {
-        let name = document.querySelector('#input');
-
-        app.names.push(name.value);
-
-        name.value = '';
       });
     </script>
     </body>
