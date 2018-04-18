@@ -62,6 +62,10 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .is-loading {
+                opacity: .3;
+            }
         </style>
     </head>
     <body>
@@ -71,7 +75,7 @@
                     Data Binding
                 </div>
                 <div id="app">
-                    <button v-bind:title="title">Hover me</button>
+                    <button :title="title" :class="{ 'is-loading': isLoading }" @click="toggleClass">Toggle me</button>
                 </div>
             </div>
         </div>
@@ -80,7 +84,13 @@
       new Vue({
         el: '#app',
         data: {
-          title: 'This is the title'
+          title: 'This is the title',
+          isLoading: true
+        },
+        methods: {
+          toggleClass() {
+            this.isLoading = !this.isLoading;
+          }
         }
       });
     </script>
