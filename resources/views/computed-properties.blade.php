@@ -75,7 +75,9 @@
                     Computed Properties
                 </div>
                 <div id="app">
-                    <h1 v-text="new Date()"></h1>
+                    <h1>
+                        @{{ title.split('').reverse().join('')  }}
+                    </h1>
                 </div>
             </div>
         </div>
@@ -85,13 +87,7 @@
         el: '#app',
         data: {
           title: 'This is the title',
-          isLoading: true
         },
-        methods: {
-          toggleClass() {
-            this.isLoading = !this.isLoading;
-          }
-        }
       });
     </script>
     </body>
