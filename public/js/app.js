@@ -13893,9 +13893,13 @@ window.Vue = __webpack_require__(36);
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-// const app = new Vue({
-//     el: '#app'
-// });
+Vue.component('task', {
+  template: '<li><slot></slot></li>'
+});
+
+var app = new Vue({
+  el: '#app'
+});
 
 /***/ }),
 /* 13 */
