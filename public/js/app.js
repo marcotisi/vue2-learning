@@ -13874,7 +13874,6 @@ module.exports = __webpack_require__(39);
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -13892,6 +13891,16 @@ window.Vue = __webpack_require__(36);
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
+
+Vue.component('task-list', {
+  template: '\n    <div>\n        <task v-for="task in tasks">{{ task.description }}</task>\n    </div>\n   ',
+
+  data: function data() {
+    return {
+      tasks: [{ description: 'Take the dog out', completed: true }, { description: 'Wash the dishes', completed: true }, { description: 'Finish this lesson', completed: false }, { description: 'Cook the dinner', completed: false }]
+    };
+  }
+});
 
 Vue.component('task', {
   template: '<li><slot></slot></li>'

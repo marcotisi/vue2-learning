@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -16,6 +15,25 @@ window.Vue = require('vue');
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
+
+Vue.component('task-list', {
+  template: `
+    <div>
+        <task v-for="task in tasks">{{ task.description }}</task>
+    </div>
+   `,
+
+  data() {
+    return {
+      tasks: [
+        {description: 'Take the dog out', completed: true},
+        {description: 'Wash the dishes', completed: true},
+        {description: 'Finish this lesson', completed: false},
+        {description: 'Cook the dinner', completed: false}
+      ]
+    }
+  }
+});
 
 Vue.component('task', {
   template: '<li><slot></slot></li>'

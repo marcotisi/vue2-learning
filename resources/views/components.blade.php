@@ -75,10 +75,7 @@
                     Components
                 </div>
                 <div id="app">
-                    <task>Take the dog out</task>
-                    <task>Wash the dishes</task>
-                    <task>Finish this lesson</task>
-                    <task>Cook the dinner</task>
+                    <task-list></task-list>
                 </div>
             </div>
         </div>
