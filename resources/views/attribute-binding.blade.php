@@ -72,7 +72,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Data Binding
+                    Attribute Binding
                 </div>
                 <div id="app">
                     <button :title="title" :class="{ 'is-loading': isLoading }" @click="toggleClass">Toggle me</button>
