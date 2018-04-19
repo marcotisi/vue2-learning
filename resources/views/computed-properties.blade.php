@@ -75,9 +75,13 @@
                     Computed Properties
                 </div>
                 <div id="app">
-                    <h1>Completed Tasks</h1>
+                    <h2>All Tasks</h2>
                     <ul>
-                        <li v-for="task in tasks" v-if="task.completed" v-text="task.description"></li>
+                        <li v-for="task in tasks" v-text="task.description"></li>
+                    </ul>
+                    <h2>Incomplete Tasks</h2>
+                    <ul>
+                        <li v-for="task in incompleteTasks" v-text="task.description"></li>
                     </ul>
                 </div>
             </div>
@@ -95,8 +99,8 @@
           ]
         },
         computed: {
-          reversedTitle() {
-            return this.title.split('').reverse().join('');
+          incompleteTasks() {
+            return this.tasks.filter(task => ! task.completed);
           }
         }
       });
