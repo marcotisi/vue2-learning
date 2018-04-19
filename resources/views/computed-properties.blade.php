@@ -75,7 +75,10 @@
                     Computed Properties
                 </div>
                 <div id="app">
-                    <h1>@{{ reversedTitle }}</h1>
+                    <h1>All Tasks</h1>
+                    <ul>
+                        <li v-for="task in tasks" v-text="task.description"></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -84,7 +87,12 @@
       new Vue({
         el: '#app',
         data: {
-          title: 'This is the title',
+          tasks: [
+            { description: 'Take the dog out', completed: true },
+            { description: 'Wash the dishes', completed: true },
+            { description: 'Finish this lesson', completed: false },
+            { description: 'Cook the dinner', completed: false }
+          ]
         },
         computed: {
           reversedTitle() {
