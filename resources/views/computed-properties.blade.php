@@ -75,9 +75,7 @@
                     Computed Properties
                 </div>
                 <div id="app">
-                    <h1>
-                        @{{ title.split('').reverse().join('')  }}
-                    </h1>
+                    <h1>@{{ reversedTitle }}</h1>
                 </div>
             </div>
         </div>
@@ -88,6 +86,11 @@
         data: {
           title: 'This is the title',
         },
+        computed: {
+          reversedTitle() {
+            return this.title.split('').reverse().join('');
+          }
+        }
       });
     </script>
     </body>
