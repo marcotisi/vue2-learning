@@ -13908,7 +13908,20 @@ Vue.component('task', {
 
 Vue.component('message', {
   props: ['title', 'body'],
-  template: '\n    <article class="message">\n        <div class="message-header">\n            {{ title }}\n            <button class="delete" aria-label="delete"></button>\n        </div>\n        <div class="message-body">\n            {{ body }}\n        </div>\n    </article>\n  '
+
+  data: function data() {
+    return {
+      isVisible: true
+    };
+  },
+
+
+  template: '\n    <article class="message" v-show="isVisible">\n        <div class="message-header">\n            {{ title }}\n            <button class="delete" aria-label="delete" @click="hideModal"></button>\n        </div>\n        <div class="message-body">\n            {{ body }}\n        </div>\n    </article>\n  ',
+  methods: {
+    hideModal: function hideModal() {
+      this.isVisible = false;
+    }
+  }
 });
 
 var app = new Vue({
