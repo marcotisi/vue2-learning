@@ -13916,12 +13916,7 @@ Vue.component('message', {
   },
 
 
-  template: '\n    <article class="message" v-show="isVisible">\n        <div class="message-header">\n            {{ title }}\n            <button class="delete" aria-label="delete" @click="hideModal"></button>\n        </div>\n        <div class="message-body">\n            {{ body }}\n        </div>\n    </article>\n  ',
-  methods: {
-    hideModal: function hideModal() {
-      this.isVisible = false;
-    }
-  }
+  template: '\n    <article class="message" v-show="isVisible">\n        <div class="message-header">\n            {{ title }}\n            <button class="delete" aria-label="delete" @click="isVisible = false"></button>\n        </div>\n        <div class="message-body">\n            {{ body }}\n        </div>\n    </article>\n  '
 });
 
 var app = new Vue({
