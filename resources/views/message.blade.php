@@ -76,7 +76,11 @@
                     Message Component
                 </div>
                 <div id="app" class="container">
-                    <message title="Hello world!" body="When cutting salty chickpeas, be sure they are room temperature."></message>
+                    <message title="With watermelons drink vinegar!" body="When cutting salty chickpeas, be sure they are room temperature."></message>
+                    <message title="Futility, afterlife and a simple state of purpose." body="Our calm awareness for suffering is to hear others theosophically."></message>
+                    <message title="Cum decor favere, omnes tataes transferre mirabilis, alter ususes." body="Cum cursus ridetis, omnes hilotaees quaestio noster, clemens exsules."></message>
+                    <message title="Cold, heavy-hearted peglegs cowardly crush an evil, warm ale." body="Scrawny, wet shipmates cowardly drink a misty, stormy comrade."></message>
+                    <message title="Harvest wihtout pressure, and we won’t avoid an admiral." body="Strange, gravimetric klingons cunningly attack a senior, dead c-beam."></message>
                 </div>
             </div>
         </div>
