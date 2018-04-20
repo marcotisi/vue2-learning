@@ -67,6 +67,7 @@
                 opacity: .3;
             }
         </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -74,7 +75,8 @@
                 <div class="title m-b-md">
                     Message Component
                 </div>
-                <div id="app">
+                <div id="app" class="container">
+                    <message title="Hello world!" body="When cutting salty chickpeas, be sure they are room temperature."></message>
                 </div>
             </div>
         </div>

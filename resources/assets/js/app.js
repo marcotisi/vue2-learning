@@ -39,6 +39,20 @@ Vue.component('task', {
   template: '<li><slot></slot></li>'
 });
 
+Vue.component('message', {
+  template: `
+    <article class="message">
+        <div class="message-header">
+            <p>{{ title }}</p>
+            <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+            {{ body }}
+        </div>
+    </article>
+  `
+});
+
 const app = new Vue({
   el: '#app'
 });
